@@ -1,0 +1,22 @@
+Mikołaj Bieniek 08.12.2024 Kraków
+
+Opis schematu działania algorytmów sortowania:
+BubbleSort(Sortowanie bąbelkowe):
+    Sortowanie bąbelkowe jest wykonywane w n - 1 fazach. (Bo int i = 1 do v.size()) W fazie i-tej wyznaczany jest i-ty najmniejszy element. 
+    Załóżmy, że po i-1 pierwszych fazach mamy wyznaczone i uporządkowane i-1 najmniejsze elementy,
+    W fazie i-tej porównywane są kolejno elementy w parach (a[n],a[n-1]), (a[n-1],a[n-2]), ... , (a[i+1],a[i]).
+    Jeżeli elementy w parze nie są uporządkowane, dokonujemy ich zamiany.
+
+SelectionSort(Sortowanie przez wybór):
+    Zamiast przesuwac najmniejszy element w nieposortowanym czesci wektora na koniec posortowanej czesci tak jak
+    w bubblesorcie, tutaj: W zaleznosci od wybranej implementacji zapisujemy najwiekszy/najmniejszy element, zapisujemy jego pozycje, 
+    oraz zamieniamy ten element (z czesci nieposotowanej) na element ktory znajduje sie na docelowej pozycji elementu najwiekszego/najmniejszego 
+    Gdy, szukamy max_element to zamieniamy go z elementem na koncu nieposortowanej czesci
+    Gdy, szukamy min_element to zamieniamy go z elementem na poczatku nieposrotowanej czesci
+
+InsertionSort(Sortowanie przez wstawianie):
+    InsertionSort działa, zaczynając od drugiego elementu w zbiorze, traktując pierwszy jako posortowany, 
+    a następnie iteracyjnie wstawia każdy kolejny element na właściwe miejsce w posortowanej części. 
+    Dla każdego elementu przegląda posortowaną część od końca, przesuwając elementy większe o jedną pozycję w prawo, 
+    aż znajdzie odpowiednie miejsce dla bieżącego elementu. 
+    W ten sposób posortowana część rośnie w każdej iteracji, aż cały zbiór zostanie uporządkowany.

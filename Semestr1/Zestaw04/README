@@ -1,0 +1,38 @@
+Mikolaj Bieniek 24.11.2024
+Zestaw04
+
+Opis programów w zestawie:
+ArrayList.hpp - PPlik nagłówkowy z definicją klasy ArrayList oraz z deklaracjami metod.
+ArrayList.cpp - Program, który wczytuje dane wejściowe i wywołuje odpowiednie operacje na liście ArrayList.
+
+CursorList.hpp - Plik nagłówkowy z definicją klasy CursorList oraz deklaracjami metod.
+CursorList.cpp -  Program, który wczytuje dane wejściowe i wywołuje odpowiednie operacje na liście CursorList.
+Makefile - Plik do kompilacji programów z zestawu04.
+README - plik z opisem działania programów z zestawu04.
+
+Format danych wejściowych:
+• F x - wstaw liczbę na początek listy (ang. front)
+• B x - wstaw liczbę na koniec listy (ang. back)
+• f - usuń z listy pierwszy element i go wypisz, jeśli lista jest pusta wypisz “EMPTY”
+• b - usuń z listy ostatni element i go wypisz, jeśli lista jest pusta wypisz “EMPTY”
+• R x y - jeżeli x nie jest obecny w liście wypisz FALSE, w przeciwnym razie zastąp pierwsze
+wystąpienie wartości x przez y i wypisz TRUE (ang. replace)
+• S - wypisz rozmiar listy
+Maksymalnie w liście może znajdować się do 1000 elementów jednocześnie oraz liczba operacji do wykonania
+n nie może przekroczyć 1000 (n <= 1000).
+
+
+1. Jakie są zalety implementacji wskaźnikowej, a jakie implementacji tablicowej?
+
+Tablicowa implementacja jest prostsza w przechowywaniu i dostępie do danych, ponieważ dostęp do elementu tablicy jest szybki i stały (O(1)), 
+ale jej rozmiar jest statyczny i musi być zdefiniowany z góry. Może być też mniej elastyczna w przypadku dynamicznych operacji na danych.
+
+Wskaźnikowa implementacja jest bardziej elastyczna, ponieważ umożliwia dynamiczne tworzenie i usuwanie elementów (np. w przypadku listy powiązanej). 
+Jest szybsza przy manipulacji danymi, ponieważ można zmieniać położenie wskaźników bez konieczności przemieszczania danych w pamięci. 
+Z drugiej strony, wskaźnikowa implementacja jest bardziej skomplikowana i wymaga zarządzania pamięcią.
+
+
+2. . Jakie są zalety implementacji kursorowej?
+Kursorowa lista to struktura oparta na implementacji tablicowej i wskaźnikowej.Węzły listy przechowują indeksy do kolejnych elementów zamiast wskaźników. 
+Dzięki temu operacje wstawiania i usuwania są bardziej efektywne, a pamięć zarządzana jest w sposób prostszy i szybszy niż w tradycyjnych listach (nie ma alokacji i dealokacji pamieci).
+Ponadto, wykorzystanie indeksów zamiast wskaźników zmniejsza złożoność zarządzania pamięcią.

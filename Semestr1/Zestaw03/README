@@ -1,0 +1,51 @@
+Mikołaj Bieniek 24.11.2024
+Zestaw03
+
+Opis programów w zestawie:
+LinkedList.hpp - Plik nagłówkowy z definicją klasy LinkedList oraz z deklaracjami metod 
+LinkedList.cpp - Program, który wczytuje dane wejściowe i wywołuje odpowiednie operacje na liście LinkedList.
+Generator.cpp -  Program służący do generowania losowych danych wejściowych dla programu LinkedList.cpp. 
+Program przyjmuje liczbę operacji n jako argument wywołania, 
+a następnie generuje odpowiednią liczbę losowych operacji według formatu poniżej.
+Makefile - Plik do kompilacji programów z zestawu03.
+README - plis z opisem działania programów z zestawu03.
+
+Format danych wejściowych:
+• F x - wstaw liczbę na początek listy (ang. front)
+• B x - wstaw liczbę na koniec listy (ang. back)
+• f - usuń z listy pierwszy element i go wypisz, jeśli lista jest pusta wypisz “EMPTY”
+• b - usuń z listy ostatni element i go wypisz, jeśli lista jest pusta wypisz “EMPTY”
+• R x y - jeżeli x nie jest obecny w liście wypisz FALSE, w przeciwnym razie zastąp pierwsze
+wystąpienie wartości x przez y i wypisz TRUE (ang. replace)
+• S - wypisz rozmiar listy
+Maksymalnie w liście może znajdować się do 1000 elementów jednocześnie oraz liczba operacji do wykonania
+n nie może przekroczyć 1000 (n <= 1000).
+
+
+Odpowiedzi na pytania w zestawie:
+
+1. Jakie są zalety implementacji wskaźnikowej, a jakie implementacji tablicowej?
+
+Tablicowa implementacja jest prostsza w przechowywaniu i dostępie do danych, ponieważ dostęp do elementu tablicy jest szybki i stały (O(1)), 
+ale jej rozmiar jest statyczny i musi być zdefiniowany z góry. Może być też mniej elastyczna w przypadku dynamicznych operacji na danych.
+
+Wskaźnikowa implementacja jest bardziej elastyczna, ponieważ umożliwia dynamiczne tworzenie i usuwanie elementów (np. w przypadku listy powiązanej). 
+Jest szybsza przy manipulacji danymi, ponieważ można zmieniać położenie wskaźników bez konieczności przemieszczania danych w pamięci. 
+Z drugiej strony, wskaźnikowa implementacja jest bardziej skomplikowana i wymaga zarządzania pamięcią.
+
+
+2. Zastanowić się jak zaimplementować listę dwukierunkową zapamiętując tylko jeden wskaźnik?
+
+Lista dwukierunkowa z jednym wskaźnikiem: Można to zrobić za pomocą techniki znanej jako "XOR Linked List".
+Zamiast przechowywać dwa wskaźniki (prev i next), przechowujemy jeden wskaźnik,
+który jest wynikiem operacji XOR na wskaźnikach poprzedniego i następnego elementu.
+Aby przejść do następnego elementu, wykonujemy operację XOR na obecnym wskaźniku z adresem poprzedniego węzła. 
+Wymaga to pamiętania poprzedniego węzła podczas iteracji, co może utrudniać implementację, ale zmniejsza zapotrzebowanie na pamięć.
+Różnica między odwołaniem uniwersalnym a odwołaniem do r-wartości:
+
+3. . Czym się różni odwołanie uniwersalne od odwołania do r-wartości (dla chętnych)?
+
+Odwołanie do r-wartości (T&&) jest używane do przechwytywania r-wartości, które mogą być przenoszone (np. przez std::move).
+Odwołanie uniwersalne (auto&& lub template<class T> void f(T&&)) jest używane w szablonach, 
+gdzie typ T jest dedukowany przez kompilator. Dzięki temu odwołanie uniwersalne może przechwycić 
+zarówno l-wartości (obiekty, które mogą zostać przypisane) jak i r-wartości (obiekty tymczasowe).

@@ -1,0 +1,15 @@
+
+• Na czym polega przechodzenie drzewa preorder?
+• Na czym polega przechodzenie drzewa inorder? Jaka będzie kolejność wypisywanych elementów?
+• Na czym polega przechodzenie drzewa postorder,
+
+#inorder - Klucz korzenia zostaje wypisany  między wartościami z jego lewego poddrzewa,a wartościami z jego prawego poddrzewa. ( in w środku, między dwoma)
+#preorder - Wypisuje klucz korzenia przed wypisaniem wartościami z obu poddrzew ( pre = przed, potem lewe,prawe poddrzewo)
+#postorder - Wypisuje klucz korzenia po wypisaniu wartości z obu podrzew (lewe,prawe poddrzewo, klucz)
+
+Metody przechodzenia wszystkich elementów drzewa binarnego
+• pre-order (wzdłużna): korzeń, lewe poddrzewo, prawe poddrzewo / możliwa kolejność dodawania elementów
+• in-oder (poprzeczna): lewe poddrzewo, korzeń, prawe poddrzewo / sortowanie elementów drzewa
+• post-order (wsteczna): lewe poddrzewo, prawe poddrzewo, korzeń / usuwanie drzewa element po elemencie
+Złożoność obliczeniowa przechodzenia drzewa O(n).
+Procedura wyszukania elementu w drzewie BST ma złożoność obliczeniową O(h).
